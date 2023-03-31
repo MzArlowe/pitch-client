@@ -1,0 +1,44 @@
+body{
+    background-color: #ffffff;
+}
+
+#navBar {
+    background-color: #b3c38d;
+}
+
+#pitch {
+    color: #005b8c;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+#menuToggler{
+    color: #005b8c;
+    font-size: 1.25rem;
+}
+
+#listItems{
+    color: #005b8c;
+}
+
+#navSearchButton {
+    background-color: #ffffff;
+    color: #005b8c;
+    font-weight: bolder;
+}
+
+.edArticles {
+    text-align: center;
+    padding: 70px;
+}
+
+#wordSearchBar{
+    width: 300px;
+    
+}
+
+#wordSearch {
+    background-color: #b3c38d;
+    color: #005b8c;
+}
+
