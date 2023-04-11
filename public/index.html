@@ -35,38 +35,50 @@
     <div id="root">
 
       <!-- Code for the navbar-->
-      <nav class="navbar bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-danger-subtle">
         <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Navbar</span>
-        </div>
-
-        <!--Code for hamburger menu-->
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-          <h5 class="text-white h4">Welcome!</h5>
-            <ul>
-              <li><a>Education</a></li>
-              <li><a>Messaging</a></li>
-              <li><a>Logout</a></li>
+          <a class="navbar-brand" href="#">Pitch</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Messages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./education.html">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
             </ul>
-            <span class="text-body-secondary">Toggleable via the navbar brand.</span>
           </div>
         </div>
-
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
       </nav>
 
       <div class="row">
-        <div class="col">
-          <section></section>
-          <section></section>
-          <section></section>
+        <div class="col-lg-9">
+          <section>
+            <h1>Founder Project</h1>
+          </section>
+          <hr>
+          <br>
+          <section>
+            <h1>Description</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit mollitia doloribus adipisci iure sint aspernatur. Dicta necessitatibus nobis dolorem iure mollitia quisquam harum vitae modi, nostrum numquam, repudiandae distinctio dolores?</p>
+          </section>
+          <section>
+            <h1>Uploads</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, accusamus impedit eligendi obcaecati ea tempore. Magni dignissimos ab labore amet. Doloribus sunt praesentium molestiae facere sed sit illo cupiditate error.</p>
+            <ul>
+              <li>Upload item</li>
+              <li>Upload Item</li>
+              <li>Upload Item</li>
+            </ul>
+          </section>
         </div>
-        <div class="col">
+        <div class="col-lg-3">
           <section></section>
           <section></section>
           <section></section>
@@ -74,7 +86,11 @@
       </div>
 
       <!--Code for the footer section-->
-      <footer></footer>
+      <footer>
+        <ul>
+          <li>Here is a temp footer</li>
+        </ul>
+      </footer>
     </div>
     <!--Script tag for Bootstrap5-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
