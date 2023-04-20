@@ -35,42 +35,106 @@ footer {
     /* float:inline-end; */
   }
 
-section::after {
+/* section::after {
 content: "";
 display: table;
 clear: both;
 border-color: black;
 border: black;
-border-style: dashed;
+border-style: dashed; */
 /* float: left;
 padding: 20px; */
-}
+/* } */
 
-aside {
+/* #aside {
     float: right;
-  padding: 20px;
-  width: 20%;
-  background-color: #f1f1f1;
-  /* height: 300px; */
-  border-color: black;
-  border: black;
-  border-style: dashed;
-  margin-top: auto;
-  min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+    padding: 20px;
+    width: 87%;
+    background-color: #f1f1f1;
+    border-color: black;
+    border: black;
+    border-style: dashed;
+    margin-top: auto;
+    min-height: 100vh;
+    grid-column-start: second;
+    grid-column-end: auto;
+    justify-self: end;
+} */
 
 #founder {
     border-color: black;
     border: black;
     border-style: dashed;
-    width: 73%;
-    float: left;
+    /* width: 73%; */
+    /*float: left;*/
+    grid-column: first / second;
+    /* background-color: purple; */
+    /* grid-row: 1 / 2; */
 }
+
+#description {
+  grid-column: first / second;
+  grid-row: [row-1] / [row-2];
+  border-color: black;
+  border: black;
+  border-style: dashed;
+}
+
+#uploads {
+  grid-column: first / second;
+  grid-row: [row-2] / [row-3];
+  border-color: black;
+  border: black;
+  border-style: dashed;  
+}
+
+#message {
+  /* grid-column: first / second; */
+  grid-column: second;
+  grid-row: -4 / -3;
+  /*grid-column-end: auto; */
+  /* display: inline-grid; */
+  /* grid-row-start: [row-1];
+  grid-row-end: [row-2]; */
+  border-color: black;
+  border: black;
+  border-style: dashed;
+}
+
+#partners {
+  grid-column: second;
+  grid-row: -3 / -2;
+  /* grid-column-start: second;
+  grid-column-end: auto;
+  grid-row-start: [row-2];
+  grid-row-end: [row-3]; */
+  border-color: black;
+  border: black;
+  border-style: dashed;
+}
+
+#Media {
+  grid-column: second;
+  /* grid-column-end: auto; */
+  grid-row: -2 / -1;
+  border-color: black;
+  border: black;
+  border-style: dashed;
+}
+
+/* #aside {
+    grid-column: 2 / -1;
+    justify-self: end;
+} */
 
 body {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [first] 75vw [second] 25vw;
+    grid-template-rows: [row-1] 15vh [row-2] 67vh [row-3] 18vh;
 }
