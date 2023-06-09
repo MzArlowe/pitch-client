@@ -6,10 +6,10 @@ a:link {
 }
 
 a:visited {
-  color: pink;
+  color: white;
   background-color: transparent;
   text-decoration: none;
-}t
+}
 
 a:hover {
   color: red;
@@ -86,32 +86,32 @@ padding: 20px; */
 }
 
 #funderMedia {
-  grid-column: second;
-  grid-row: -3 / -1;
+  grid-column: first;
+  grid-row: 2 / 2;
   /* border-color: black; commented out because media section needs to be expanded
   border: black;
   border-style: dashed; */
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .container {
     grid-template-areas: 
     'founder'
     'description'
     'uploads';
   }
-   /* #founder {
+   #founder {
     width: 100%;
-    height: 50%; */
-    /* grid-column: first ;
-    grid-row: first/second; */
+    height: 50%;
+    grid-column: first ;
+    grid-row: first/second;
     
-   } 
-/* } */
+   }
+}  */
 
 #description {
   grid-column: first / second;
-  grid-row: [row-1] / [row-2];
+  grid-row: 2 / 3;
   border-color: black;
   border: black;
   border-style: dashed;
@@ -119,7 +119,7 @@ padding: 20px; */
 }
 #uploads {
   grid-column: first / second;
-  grid-row: [row-2] / [row-3];
+  grid-row: 3 / 4;
   border-color: black;
   border: black;
   border-style: dashed;
@@ -148,14 +148,14 @@ padding: 20px; */
   border: black;
   border-style: dashed;
 }
-#Media {
+/* #media {
   grid-column: second;
   grid-row: -2 / -1;
-  grid-area: Media;
+  grid-area: media;
   border-color: black;
   border: black;
   border-style: dashed;
-}
+} */
 
 body {
     min-height: 100vh;
@@ -164,5 +164,8 @@ body {
     display: grid;
     grid-template-columns: [first] 75vw [second] 25vw;
     grid-template-rows: [row-1] 15vh [row-2] 67vh [row-3] 18vh;
-
+    grid-template-areas:
+                                  "founder  message"
+                                  "description     media"
+                                  "uploads  partners";
 }
