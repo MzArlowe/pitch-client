@@ -85,13 +85,13 @@ padding: 20px; */
     grid-row: 1 / 3;
 }
 
-#funderMedia {
+/* #funderMedia {
   grid-column: first;
   grid-row: 2 / 2;
-  /* border-color: black; commented out because media section needs to be expanded
+  border-color: black; commented out because media section needs to be expanded
   border: black;
-  border-style: dashed; */
-}
+  border-style: dashed;
+} */
 
 /* @media only screen and (max-width: 768px) {
   .container {
@@ -159,6 +159,8 @@ padding: 20px; */
 
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .container {
     display: grid;
