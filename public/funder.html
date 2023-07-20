@@ -73,7 +73,15 @@
           <h2>Current Projects</h2>
         </div>
         <div id="uploadsFunder">
-          <h2>Uploads</h2>
+          <form method="post" action="/upload">
+            <!-- <input type="text" value="Click here and press tab to test keyboard interaction."> -->
+            <label class="file">
+                Drop a file or click to select one
+                <input type="file" multiple>
+                <!-- use multiple, even if it’s not allowed, to be able to show an info text -->
+            </label>
+            <button type="submit">Upload</button>
+        </form>
         </div>
         <!-- <aside id="aside">
           <h1>Founders Dashboard</h1>
