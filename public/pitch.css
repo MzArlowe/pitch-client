@@ -70,21 +70,9 @@ footer {
   color: white;
   margin-top: auto;
 }
-/* section::after {
-content: "";
-display: table;
-clear: both;
-border-color: black;
-border: black;
-border-style: dashed; */
-/* float: left;
-padding: 20px; */
-/* } */
 
 #founder {
   background: #d9d9d9;
-  /* width: 360px;
-  height: 214px; */
   position: relative;
   display: block;
   width: 100%;
@@ -112,30 +100,6 @@ box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 2px 1px 0px rgba(0, 0, 0, 0
   margin-bottom: 10px;
   margin-right: 20px;
 }
-
-/* #funderMedia {
-  grid-column: first;
-  grid-row: 2 / 2;
-  border-color: black; commented out because media section needs to be expanded
-  border: black;
-  border-style: dashed;
-} */
-
-/* @media only screen and (max-width: 768px) {
-  .container {
-    grid-template-areas: 
-    'founder'
-    'description'
-    'uploads';
-  }
-   #founder {
-    width: 100%;
-    height: 50%;
-    grid-column: first ;
-    grid-row: first/second;
-    
-   }
-}  */
 
 #description {
   /* display: flex; */
@@ -206,18 +170,9 @@ box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 2px 1px 0px rgba(0, 0, 0, 0
   display: block;
   width: 100%;
   margin-top: 20px;
-  /* width: 360px;
-  height: 58px; */
   flex-shrink: 0;
-  /* grid-column: second;
-  grid-row: -2 / -1;
-  grid-area: media; */
-  /* border-color: black;
-  border: black;
-  border-style: dashed; */
   background: #d9d9d9;
   box-sizing: border-box;
-  /* margin: 10px; */
   color: var(--00-on-surface-medium-emphasis, rgba(0, 0, 0, 0.60));
 text-align: center;
 
@@ -229,7 +184,6 @@ font-weight: 400;
 line-height: 24px;
 letter-spacing: 0.18px;
 border-radius: 4px;
-/* background: var(--surface, #FFF); */
 box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 2px 1px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 }
 
@@ -350,3 +304,135 @@ iframe {
   /* border: 1px solid black; */
   width: 100%; /* takes precedence over the width set with the HTML width attribute */
 }
+/* Restoring browsering effects */
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  /* body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  } */
+  
+  .main_box{
+  width: 3em;
+  height: 3em;
+  position: relative;
+  }
+  
+  #share_button{
+  display: none;
+  }
+  
+  span,a{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  }
+  
+  span{
+  width: 3em;
+  height: 3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #eee;
+  color: #333;
+  font-size: 2em;
+  z-index: 1;
+  cursor: pointer;
+  /* border-radius: 30%; */
+  }
+  
+  .sm_list{
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  }
+  
+  .sm_list a{
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  transition: all .3s;
+  font-size: 1.5em;
+  }
+
+  #share_button:checked ~ .sm_list a:nth-child(1){
+  background-color: #dd2553;
+  transition-delay: 0.2s;
+  transform: translateX(4em);
+  }
+  
+  #share_button:checked ~ .sm_list a:nth-child(2){
+  background-color: #000f94;
+  transition-delay: 0.3s;
+  transform: translateX(8em);
+  }
+  
+  #share_button:checked ~ .sm_list a:nth-child(3){
+  background-color: #1077ec;
+  transition-delay: 0.3s;
+  transform: translateX(12em);
+  }
+/*   
+  #share_button:checked ~ .sm_list a:nth-child(5){
+  background-color: rgb(10, 63, 0);
+  transition-delay: 0.4s;
+  transform: translateX(18em);
+  }
+  
+  #share_button:checked ~ .sm_list a:nth-child(6){
+  background: linear-gradient(70deg,blue,green,red,yellow);
+  transition-delay: 0.4s;
+  transform: translateX(-18em);
+  } */
+  
+  /* Hovering Effects */
+  /* #share_button:checked ~ .sm_list a:nth-child(1):hover{
+  background-color: #ffffff;
+  color: #3B5998; */
+  /* transition-delay: 0.2s;
+  transform: translateX(-6em); */
+  /* } */
+  
+  /* #share_button:checked ~ .sm_list a:nth-child(2):hover{
+  color: #dd2553;
+  background-color: #fff;
+  }
+   */
+  /* #share_button:checked ~ .sm_list a:nth-child(3):hover{
+  color: #000f94;
+  background-color: #fff;
+  } */
+  
+  /* #share_button:checked ~ .sm_list a:nth-child(4):hover{
+  color: #1077ec;
+  background-color: #fff;
+  }
+  
+  #share_button:checked ~ .sm_list a:nth-child(5):hover{
+  color: rgb(10, 63, 0);
+  background-color: #fff;
+  }
+  
+  #share_button:checked ~ .sm_list a:nth-child(6):hover{
+  color: black;
+  background-image: linear-gradient(90deg,white,grey);
+  } */
+  
+  /* span:visited{
+  background-color: #000f94;
+  } */
