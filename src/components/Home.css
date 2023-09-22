@@ -52,6 +52,8 @@
 
 .file-upload-input {
 	position: absolute;
+	left: 0%;
+	top: 0%;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -61,20 +63,21 @@
 	cursor: pointer;
 }
 
-.image-upload-wrap {
+.content-upload-wrap {
 	margin-top: 1.5rem;
 	border: 4px dashed darkgray;
 	position: relative;
 	padding: 2rem;
+	cursor: pointer;
 }
 
-.image-dropping,
-.image-upload-wrap:hover {
+.content-dropping,
+.content-upload-wrap:hover {
 	background-color: #fff;
 	border: 4px dashed darkgray;
 }
 
-.image-title-wrap {
+.content-title-wrap {
 	padding: 0 15px 15px 15px;
 	color: #222;
 }
@@ -84,20 +87,20 @@
 }
 
 .drag-text h3 {
-	font-weight: 100;
+	font-size: larger;
 	text-transform: uppercase;
 	color: #666;
 	padding: 60px 0;
 }
 
-.file-upload-image {
+.file-upload-content {
 	max-height: 200px;
 	max-width: 200px;
 	margin: auto;
 	padding: 20px;
 }
 
-.remove-image {
+.remove-content {
 	width: 200px;
 	margin: 0;
 	color: #fff;
@@ -112,14 +115,14 @@
 	font-weight: 700;
 }
 
-.remove-image:hover {
+.remove-content:hover {
 	background: #c13b2a;
 	color: #fff;
 	transition: all 0.2s ease;
 	cursor: pointer;
 }
 
-.remove-image:active {
+.remove-content:active {
 	border: 0;
 	transition: all 0.2s ease;
 }

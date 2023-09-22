@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import './Home.css';
 
 export default function Home() {
-	const [imageSrc, setImageSrc] = useState('');
-	const [imageName, setImageName] = useState('');
+	const [contentSrc, setContentSrc] = useState('');
+	const [contentName, setContentName] = useState('');
 
 	function readURL(input) {
 		if (input.files && input.files[0]) {
 			const reader = new FileReader();
 
 			reader.onload = function (e) {
-				setImageSrc(e.target.result);
-				setImageName(input.files[0].name);
+				setContentSrc(e.target.result);
+				setContentName(input.files[0].name);
 			};
 
 			reader.readAsDataURL(input.files[0]);
@@ -21,8 +21,8 @@ export default function Home() {
 	}
 
 	function removeUpload() {
-		setImageSrc('');
-		setImageName('');
+		setContentSrc('');
+		setContentName('');
 	}
 
 	return (
@@ -42,12 +42,11 @@ export default function Home() {
 					Add File
 				</button>
 
-				<div className='image-upload-wrap'>
+				<div className='content-upload-wrap'>
 					<input
 						className='file-upload-input'
 						type='file'
 						onChange={(e) => readURL(e.target)}
-						accept='image/*'
 					/>
 					<div className='drag-text'>
 						<h3>Drag and drop a file or select add file</h3>
@@ -55,18 +54,18 @@ export default function Home() {
 				</div>
 				<div className='file-upload-content'>
 					<img
-						className='file-upload-image'
-						src={imageSrc}
+						className='file-upload-content'
+						src={contentSrc}
 						alt='your pic'
 					/>
-					<div className='image-title-wrap'>
-						{imageName && (
+					<div className='content-title-wrap'>
+						{contentName && (
 							<button
 								type='button'
 								onClick={removeUpload}
-								className='remove-image'
+								className='remove-content'
 							>
-								Remove <span className='image-title'>{imageName}</span>
+								Remove <span className='content-title'>{contentName}</span>
 							</button>
 						)}
 					</div>
