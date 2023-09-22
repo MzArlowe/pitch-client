@@ -1,4 +1,4 @@
-.navbar-items {
+.navbar-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -7,10 +7,10 @@
 	background-color: #0070dd;
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 	width: 95%;
-	height: 80px;
+	height: 4.5rem;
 	border-radius: 13px;
 	position: fixed;
-	top: 20px;
+	top: .5rem;
 	left: 50%;
 	transform: translate(-50%);
 }
@@ -69,8 +69,15 @@
 	border-radius: 3px;
 	text-decoration: none;
 	font-size: 1rem;
-	font-weight: 500;
+	font-weight: bold;
 	color: #222;
+}
+
+.nav-links-mobile:hover {
+	background: #20d273;
+	color: #fff;
+	transition: all 0.2s ease;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {
