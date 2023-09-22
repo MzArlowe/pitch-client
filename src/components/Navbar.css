@@ -18,11 +18,11 @@
 .logo {
 	color: #fff;
 	cursor: pointer;
+	margin: 0;
 }
 
 .fa-react {
-	margin-left: 0.2rem;
-	font-size: 1.6rem;
+	margin-right: 0.4rem;
 }
 
 .nav-menu {
@@ -33,6 +33,7 @@
 	align-items: center;
 	text-align: center;
 	justify-content: end;
+	margin-bottom: 0;
 }
 
 .nav-links {
@@ -47,7 +48,7 @@
 }
 
 .nav-links:hover {
-	background: rgba(80, 80, 238);
+	background: rgb(256, 192, 80);
 	border-radius: 4px;
 	transition: all 0.2s ease-in-out;
 }
@@ -105,7 +106,7 @@
 		display: block;
 		width: 100%;
 		padding: 2rem 0;
-		color: #222;
+		color: #fff;
 	}
 
 	.nav-links:hover {

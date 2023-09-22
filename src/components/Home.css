@@ -8,3 +8,9 @@
 	margin-top: 8rem;
 	height: 50vh;
 }
+
+form {
+	width: 95%;
+	height: 100%;
+	margin: 1rem auto;
+}

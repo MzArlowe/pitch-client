@@ -12,7 +12,8 @@ export default function Navbar() {
 	return (
 		<nav className={`navbar-items ${clicked ? 'active' : ''}`}>
 			<h1 className='logo'>
-				<i className='fab fa-react'></i> Pitch
+				<i className='fab fa-react'></i>
+				Pitch
 			</h1>
 
 			<div
