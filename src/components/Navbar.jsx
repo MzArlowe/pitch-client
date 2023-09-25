@@ -12,8 +12,10 @@ export default function Navbar() {
 	return (
 		<nav className={`navbar-container ${clicked ? 'active' : ''}`}>
 			<h1 className='logo'>
-				<i className='fab fa-react'></i>
-				Pitch
+				<a href='/'>
+					<i className='fab fa-react'></i>
+					Pitch
+				</a>
 			</h1>
 
 			<div
