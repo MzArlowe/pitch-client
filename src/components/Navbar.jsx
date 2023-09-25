@@ -28,7 +28,7 @@ export default function Navbar() {
 					<li key={index}>
 						<a
 							href={item.url}
-							className={item.cName}
+							className={item.className}
 						>
 							<i className={item.icon}></i>
 							{item.title}
