@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuData } from './MenuData';
+import { NavbarData } from './NavbarData';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -24,7 +24,7 @@ export default function Navbar() {
 			</div>
 
 			<ul className={clicked ? 'nav-menu active' : 'nav-menu'}>
-				{MenuData.map((item, index) => (
+				{NavbarData.map((item, index) => (
 					<li key={index}>
 						<a
 							href={item.url}
