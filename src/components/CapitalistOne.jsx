@@ -21,7 +21,7 @@ export default function CapitalistOne() {
 
 	return (
 		<div className='container'>
-			<h2>{accountType} Account</h2>
+			<h1>{accountType} Account</h1>
 			<h5>
 				Let’s setup your {accountType.toLowerCase()} account login details.
 			</h5>
@@ -33,22 +33,22 @@ export default function CapitalistOne() {
 
 			<form>
 				<div className='mb-3'>
-					<label className='form-label'></label>
 					<input
 						type='email'
 						className='form-control'
 						placeholder='Email'
+						id='email'
 						name='email'
 						value={formData.email}
 						onChange={handleChange}
 						required
 					/>
 				</div>
+
+				<div className='requirements'>
+					<a href='/requirements'>Requirements</a>
+				</div>
 				<div className='mb-3'>
-					<label
-						className='form-label'
-						for='password'
-					></label>
 					<input
 						type='password'
 						className='form-control'
@@ -60,14 +60,8 @@ export default function CapitalistOne() {
 						required
 					/>
 				</div>
-				<div className='subtext'>
-					<a href='/Requirements'>Requirements</a>
-				</div>
+
 				<div className='mb-3'>
-					<label
-						className='form-label'
-						for='confirmPassword'
-					></label>
 					<input
 						type='password'
 						className='form-control'
@@ -79,7 +73,7 @@ export default function CapitalistOne() {
 						required
 					/>
 				</div>
-				<div className='subtext'>Retype password</div>
+
 				<button
 					type='submit'
 					className='btn btn-primary'
@@ -88,7 +82,7 @@ export default function CapitalistOne() {
 				</button>
 			</form>
 			<br />
-			<a href='/Login'>Already have an Account?</a>
+			<a href='/Login'>Already have an account?</a>
 		</div>
 	);
 }

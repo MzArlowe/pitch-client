@@ -1,24 +1,34 @@
-.container {
-
+h6 {
+	margin: 3vh 0 1vh 0;
 }
 
 #progressBar {
+	margin: 1vh 20vw 4vh;
 	background-color: #d9c2fb;
-	margin: 1rem 5rem;
 }
 
 #progressBar > div {
-	background-color: #6200ee;
 	width: 2%;
-	height: .5rem;
+	height: 1vh;
+	background-color: #6200ee;
 }
 
 .mb-3 {
-	margin: 0 2rem 0 !important
+	margin: 0 5vw !important;
 }
 
-.subtext {
+.requirements {
+	margin: 2vh 6vw 0.6vh;
 	font-size: small;
 	text-align: start;
-	margin: 0 2rem 0 2.75rem !important
+}
+
+#emai,
+#confirmPassword {
+	margin-top: 1rem;
+}
+
+.btn {
+	width: 35vw;
+	margin: 4vh 0 2vh;
 }
