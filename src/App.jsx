@@ -1,23 +1,23 @@
-import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
+import './App.css';
+import CapitalistOne from './components/CapitalistOne';
 import Footer from './components/Footer';
+import Home from './components/Home';
 import HTTP404 from './components/HTTP404';
+import Navbar from './components/Navbar';
 
 const router = createBrowserRouter([
+	{
+		path: '*',
+		element: <HTTP404 />,
+	},
 	{
 		path: '/',
 		element: <Home />,
 	},
 	{
-		path: 'About',
-		element: <About />,
-	},
-	{
-		path: '*',
-		element: <HTTP404 />,
+		path: 'CapitalistOne',
+		element: <CapitalistOne />,
 	},
 ]);
 
