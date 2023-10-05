@@ -20,33 +20,39 @@ export default function CapitalistOne() {
 	// let accountType = 'Entrepreneur'
 
 	return (
-		<>
+		<div className='container'>
 			<h2>{accountType} Account</h2>
 			<h5>
 				Let’s setup your {accountType.toLowerCase()} account login details.
 			</h5>
-			<p>0%</p>
+			<h6>0%</h6>
 
 			<div id='progressBar'>
 				<div></div>
 			</div>
 
 			<form>
-				<div>
-					<label htmlFor='email'>Email:</label>
+				<div className='mb-3'>
+					<label className='form-label'></label>
 					<input
 						type='email'
-						id='email'
+						className='form-control'
+						placeholder='Email'
 						name='email'
 						value={formData.email}
 						onChange={handleChange}
 						required
 					/>
 				</div>
-				<div>
-					<label htmlFor='password'>Password:</label>
+				<div className='mb-3'>
+					<label
+						className='form-label'
+						for='password'
+					></label>
 					<input
 						type='password'
+						className='form-control'
+						placeholder='Password'
 						id='password'
 						name='password'
 						value={formData.password}
@@ -54,10 +60,18 @@ export default function CapitalistOne() {
 						required
 					/>
 				</div>
-				<div>
-					<label htmlFor='confirmPassword'>Confirm Password:</label>
+				<div className='subtext'>
+					<a href='/Requirements'>Requirements</a>
+				</div>
+				<div className='mb-3'>
+					<label
+						className='form-label'
+						for='confirmPassword'
+					></label>
 					<input
 						type='password'
+						className='form-control'
+						placeholder='Confirm Password'
 						id='confirmPassword'
 						name='confirmPassword'
 						value={formData.confirmPassword}
@@ -65,10 +79,16 @@ export default function CapitalistOne() {
 						required
 					/>
 				</div>
-				<button type='submit'>Next</button>
+				<div className='subtext'>Retype password</div>
+				<button
+					type='submit'
+					className='btn btn-primary'
+				>
+					Next
+				</button>
 			</form>
 			<br />
 			<a href='/Login'>Already have an Account?</a>
-		</>
+		</div>
 	);
 }
