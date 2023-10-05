@@ -1,5 +1,6 @@
 h6 {
 	margin: 3vh 0 1vh 0;
+	font-weight: bold;
 }
 
 #progressBar {
@@ -8,7 +9,6 @@ h6 {
 }
 
 #progressBar > div {
-	width: 2%;
 	height: 1vh;
 	background-color: #6200ee;
 }
@@ -29,6 +29,9 @@ h6 {
 }
 
 .btn {
-	width: 35vw;
+	width: 45vw;
 	margin: 4vh 0 2vh;
+	border-color: gray;
+	color: #6200ee;
+	font-size: larger;
 }

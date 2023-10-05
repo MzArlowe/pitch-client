@@ -16,6 +16,12 @@ export default function CapitalistOne() {
 		});
 	};
 
+	const progress = 0; // Set initial value (0-100).
+	let progressDiv = progress;
+	if (progress < 2) {
+		progressDiv = 2;
+	}
+
 	let accountType = 'Venture Capitalist';
 	// let accountType = 'Entrepreneur'
 
@@ -25,10 +31,11 @@ export default function CapitalistOne() {
 			<h5>
 				Let’s setup your {accountType.toLowerCase()} account login details.
 			</h5>
-			<h6>0%</h6>
+
+			<h6>{progress}%</h6>
 
 			<div id='progressBar'>
-				<div></div>
+				<div style={{ width: `${progressDiv}%` }}></div>
 			</div>
 
 			<form>
@@ -76,7 +83,7 @@ export default function CapitalistOne() {
 
 				<button
 					type='submit'
-					className='btn btn-primary'
+					className='btn'
 				>
 					Next
 				</button>
