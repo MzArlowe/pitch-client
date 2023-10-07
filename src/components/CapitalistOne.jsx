@@ -22,7 +22,7 @@ export default function CapitalistOne() {
 		progressDiv = 2;
 	}
 
-	let accountType = 'Venture Capitalist';
+	let accountType = 'Funder';
 	// let accountType = 'Entrepreneur'
 
 	return (
