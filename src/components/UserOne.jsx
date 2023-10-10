@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './CapitalistOne.css';
+import './UserOne.css';
 
-export default function CapitalistOne() {
+export default function UserOne() {
 	const [formData, setFormData] = useState({
 		email: '',
 		password: '',
@@ -88,7 +88,6 @@ export default function CapitalistOne() {
 					Next
 				</button>
 			</form>
-			<br />
 			<a href='/Login'>Already have an account?</a>
 		</div>
 	);

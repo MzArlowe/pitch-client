@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import CapitalistOne from './components/CapitalistOne';
+import UserOne from './components/UserOne';
+import UserTwo from './components/UserTwo';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import HTTP404 from './components/HTTP404';
@@ -16,8 +17,12 @@ const router = createBrowserRouter([
 		element: <Home />,
 	},
 	{
-		path: 'CapitalistOne',
-		element: <CapitalistOne />,
+		path: 'UserOne',
+		element: <UserOne />,
+	},
+	{
+		path: 'UserTwo',
+		element: <UserTwo />,
 	},
 ]);
 
