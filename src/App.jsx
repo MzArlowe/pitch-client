@@ -5,6 +5,8 @@ import UserTwo from './components/UserTwo';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import HTTP404 from './components/HTTP404';
+import ConfirmEmail from './components/confirmEmail';
+import EmailConfirmed from './components/emailConfirmed';
 import Navbar from './components/Navbar';
 
 const router = createBrowserRouter([
@@ -24,6 +26,14 @@ const router = createBrowserRouter([
 		path: 'UserTwo',
 		element: <UserTwo />,
 	},
+	{
+		path: 'ConfirmEmail',
+		element: <ConfirmEmail />,
+	},
+	{
+		path: 'EmailConfirmed',
+		element: <EmailConfirmed />,
+	}
 ]);
 
 function App() {
