@@ -1,75 +1,71 @@
-body{
-    background-color: #ffffff;
+body {
+  background-color: #ffffff;
 }
 
 #navBar {
-    background-color: #b3c38d;
+  background-color: #b3c38d;
 }
 
 #pitch {
-    color: #005b8c;
-    font-size: 2.25rem;
-    font-weight: bold;
-    text-shadow: 2px black;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #005b8c;
+  text-shadow: 2px black;
 }
 
-#menuToggler{
-    color: #005b8c;
-    font-size: 1.25rem;
+#menuToggler {
+  font-size: 1.25rem;
+  color: #005b8c;
 }
 
-#listItems{
-    color: #005b8c;
+#listItems {
+  color: #005b8c;
 }
 
 #navSearchButton {
-    background-color: #ffffff;
-    color: #005b8c;
-    font-weight: bolder;
+  background-color: #ffffff;
+  font-weight: bolder;
+  color: #005b8c;
 }
 
-
-#wordSearchBar{
-    width: 300px;
-    
+#wordSearchBar {
+  width: 300px;
 }
 
 #wordSearch {
-    background-color: #b3c38d;
-    color: #005b8c;
+  background-color: #b3c38d;
+  color: #005b8c;
 }
 
-h1{
-    color: #005b8c;
-    font-size: 1.75rem;
+h1 {
+  font-size: 1.75rem;
+  color: #005b8c;
 }
 
 a {
-    color: #005b8c;
-    text-decoration: none;
+  color: #005b8c;
+  text-decoration: none;
 }
 
 a:hover {
-    color: black;
+  color: black;
 }
 
-
-
 .businessSection {
-    background-color: #b3c38d;
-    width: 100vw;
-    margin-top: 30px;
-    padding: 10px;
+  width: 100vw;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #b3c38d;
 }
 
 .investors {
-    width: 100vw;
-    padding: 10px;
-    margin-top: 10px;
+  width: 100vw;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 .searching {
-    width: 100vw;
-    margin-top: 30px;
-    padding: 10px;
+  width: 100vw;
+  margin-top: 30px;
+  padding: 10px;
 }

@@ -1,0 +1,15 @@
+{
+	"recommendations": [
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"aaron-bond.better-comments",
+		"hansuxdev.bootstrap5-snippets",
+		"anbuselvanrocky.bootstrap5-vscode",
+		"adpyke.codesnap",
+		"dsznajder.es7-react-js-snippets",
+		"zignd.html-css-class-completion",
+		"christian-kohler.path-intellisense",
+		"esbenp.prettier-vscode",
+		"rvest.vs-code-prettier-eslint"
+	]
+}
