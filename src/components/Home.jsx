@@ -25,65 +25,8 @@ export default function Home() {
 		setContentName('');
 	}
 
-	let ifFounder = true
+	let ifFounder = true;
 	if (ifFounder) {
-	return (
-		<div className='home'>
-			<iframe
-				id='map'
-				title='Inline Frame Example'
-				src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
-			></iframe>
-
-			<div className='file-upload'>
-				<button
-					className='file-upload-btn'
-					type='button'
-					onClick={() => document.querySelector('.file-upload-input').click()}
-				>
-					Add File
-				</button>
-
-				<div className='content-upload-wrap'>
-					<input
-						className='file-upload-input'
-						type='file'
-						onChange={(e) => readURL(e.target)}
-					/>
-					<div className='drag-text'>
-						<h3>Drag and drop a file or select add file</h3>
-					</div>
-				</div>
-				<div className='file-upload-content'>
-					<img
-						className='file-upload-content'
-						src={contentSrc}
-						alt='your pic'
-					/>
-					<div className='content-title-wrap'>
-						{contentName && (
-							<button
-								type='button'
-								onClick={removeUpload}
-								className='remove-content'
-							>
-								Remove <span className='content-title'>{contentName}</span>
-							</button>
-						)}
-					</div>
-				</div>
-				<div className='file-upload'>
-					<button
-						className='file-upload-btn'
-						type='button'
-						onClick={() => document.querySelector('.file-upload-input').click()}
-					>
-						Upload
-					</button>
-				</div>
-			</div>
-		</div>
-	);} else {
 		return (
 			<div className='home'>
 				<iframe
@@ -91,7 +34,7 @@ export default function Home() {
 					title='Inline Frame Example'
 					src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
 				></iframe>
-	
+
 				<div className='file-upload'>
 					<button
 						className='file-upload-btn'
@@ -100,7 +43,67 @@ export default function Home() {
 					>
 						Add File
 					</button>
-	
+
+					<div className='content-upload-wrap'>
+						<input
+							className='file-upload-input'
+							type='file'
+							onChange={(e) => readURL(e.target)}
+						/>
+						<div className='drag-text'>
+							<h3>Drag and drop a file or select add file</h3>
+						</div>
+					</div>
+					<div className='file-upload-content'>
+						<img
+							className='file-upload-content'
+							src={contentSrc}
+							alt='your pic'
+						/>
+						<div className='content-title-wrap'>
+							{contentName && (
+								<button
+									type='button'
+									onClick={removeUpload}
+									className='remove-content'
+								>
+									Remove <span className='content-title'>{contentName}</span>
+								</button>
+							)}
+						</div>
+					</div>
+					<div className='file-upload'>
+						<button
+							className='file-upload-btn'
+							type='button'
+							onClick={() =>
+								document.querySelector('.file-upload-input').click()
+							}
+						>
+							Upload
+						</button>
+					</div>
+				</div>
+			</div>
+		);
+	} else {
+		return (
+			<div className='home'>
+				<iframe
+					id='map'
+					title='Inline Frame Example'
+					src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
+				></iframe>
+
+				<div className='file-upload'>
+					<button
+						className='file-upload-btn'
+						type='button'
+						onClick={() => document.querySelector('.file-upload-input').click()}
+					>
+						Add File
+					</button>
+
 					<div className='content-upload-wrap'>
 						<input
 							className='file-upload-input'
@@ -133,7 +136,9 @@ export default function Home() {
 						<button
 							className='file-upload-btn'
 							type='button'
-							onClick={() => document.querySelector('.file-upload-input').click()}
+							onClick={() =>
+								document.querySelector('.file-upload-input').click()
+							}
 						>
 							Upload
 						</button>
