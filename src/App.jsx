@@ -1,8 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
 // import Dashboard from '.components/Dashboard';
-import About from './components/About';
 import './App.css';
 import UserOne from './components/UserOne';
 import UserTwo from './components/UserTwo';
@@ -13,7 +11,6 @@ import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import ConfirmEmail from './components/confirmEmail';
 import EmailConfirmed from './components/emailConfirmed';
-import Navbar from './components/Navbar';
 
 const router = createBrowserRouter([
 	{
@@ -35,8 +32,6 @@ const router = createBrowserRouter([
 	},
 
 	{
-		path: 'About',
-		element: <About />,
 		path: 'UserOne',
 		element: <UserOne />,
 	},
@@ -51,7 +46,7 @@ const router = createBrowserRouter([
 	{
 		path: 'EmailConfirmed',
 		element: <EmailConfirmed />,
-	}
+	},
 ]);
 
 function App() {

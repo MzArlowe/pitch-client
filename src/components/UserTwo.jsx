@@ -29,9 +29,7 @@ export default function UserTwo() {
 	return (
 		<div className='container'>
 			<h1>{accountType} Account</h1>
-			<h5>
-				Let’s setup your {accountType.toLowerCase()} account details.
-			</h5>
+			<h5>Let’s setup your {accountType.toLowerCase()} account details.</h5>
 
 			<h6>{progress}%</h6>
 
@@ -92,12 +90,14 @@ export default function UserTwo() {
 					/>
 				</div>
 
-				<button
+				<a href='/FindProject'>
+					{/* <button
 					type='submit'
 					className='btn'
-				>
+				> */}
 					Next
-				</button>
+					{/* </button> */}
+				</a>
 			</form>
 		</div>
 	);

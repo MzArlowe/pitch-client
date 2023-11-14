@@ -81,12 +81,14 @@ export default function UserOne() {
 					/>
 				</div>
 
-				<button
-					type='submit'
-					className='btn'
-				>
+				<a href='/confirmEmail'>
+					{/* <button
+						type='submit'
+						className='btn'
+					> */}
 					Next
-				</button>
+					{/* </button> */}
+				</a>
 			</form>
 			<a href='/Login'>Already have an account?</a>
 		</div>

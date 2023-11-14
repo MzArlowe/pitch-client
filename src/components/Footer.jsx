@@ -1,7 +1,5 @@
-import './Footer.css'
+import './Footer.css';
 
 export default function Footer() {
-	return (
-		<div className='footer'>Author: Pitch Project</div>
-	)
+	return <div className='footer'>Author: Pitch Project</div>;
 }
