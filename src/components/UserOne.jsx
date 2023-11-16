@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './UserOne.css';
+import { userType } from './NavbarData';
 
 export default function UserOne() {
 	const [formData, setFormData] = useState({
@@ -22,15 +23,10 @@ export default function UserOne() {
 		progressDiv = 2;
 	}
 
-	let accountType = 'Funder';
-	// let accountType = 'Entrepreneur'
-
 	return (
 		<div className='container'>
-			<h1>{accountType} Account</h1>
-			<h5>
-				Let’s setup your {accountType.toLowerCase()} account login details.
-			</h5>
+			<h1>{userType} Account</h1>
+			<h5>Let’s setup your {userType.toLowerCase()} account login details.</h5>
 
 			<h6>{progress}%</h6>
 
