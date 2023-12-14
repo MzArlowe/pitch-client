@@ -24,6 +24,12 @@ export const NavbarData = [
 		icon: 'fa-solid fa-address-book',
 	},
 	{
+		title: 'Sign In',
+		url: '/SignIn',
+		className: 'nav-links',
+		icon: 'fa-solid fa-address-book',
+	},
+	{
 		title: 'Sign Up',
 		url: '/SignUp',
 		className: 'nav-links-mobile',
