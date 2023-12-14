@@ -1,4 +1,5 @@
 import './SignUp.css';
+import { setUserType } from './NavbarData';
 
 export default function SignUp() {
 	return (
@@ -19,13 +20,16 @@ export default function SignUp() {
 					className='button'
 					href='/UserOne'
 				>
-					<button>Founder</button>
+					<button onClick={() => setUserType('Founder')}>Founder</button>
 				</a>
 			</div>
 
-			<div className='button'>
-				<a href='/UserOne'>
-					<button>Funder</button>
+			<div>
+				<a
+				// className='button'
+				// href='/UserOne'
+				>
+					<button onClick={() => setUserType('Funder')}>Funder</button>
 				</a>
 			</div>
 		</div>

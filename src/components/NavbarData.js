@@ -29,3 +29,16 @@ export const NavbarData = [
 		className: 'nav-links-mobile',
 	},
 ];
+
+let userType = 'notSet';
+
+function setUserType(type) {
+	if (type === 'Founder') {
+		userType = 'Founder';
+	} else if (type === 'Funder') {
+		userType = 'Funder';
+	}
+	console.log(userType);
+}
+
+export { userType, setUserType };
