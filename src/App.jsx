@@ -1,14 +1,9 @@
-import {
-	createBrowserRouter,
-	RouterProvider,
-	useLocation,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 // import Dashboard from '.components/Dashboard';
 import './App.css';
 import UserOne from './components/UserOne';
 import UserTwo from './components/UserTwo';
-import Footer from './components/Footer';
 import Home from './components/Home';
 import HTTP404 from './components/HTTP404';
 import SignIn from './components/SignIn';
@@ -71,7 +66,6 @@ function App() {
 		<div className='App'>
 			{!hideHeader && <Navbar />}
 			<RouterProvider router={router} />
-			{/* <Footer /> */}
 		</div>
 	);
 }
