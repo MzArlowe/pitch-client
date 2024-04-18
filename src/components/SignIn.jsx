@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './SignIn.css';
 
 export default function Form() {
-	// const [name, setName] = useState('');
-	const [name] = useState('');
+	const [name, setName] = useState('');
+	// const [name] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -25,13 +25,17 @@ export default function Form() {
 		setSubmitted(false);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		if (name === '' || email === '' || password === '') {
+		if (email === '' || password === '') {
 			setError(true);
 		} else {
 			setSubmitted(true);
 			setError(false);
+
+			const data = await fetch('https://swapi.dev/api/people/1');
+			const json = await data.json();
+			console.log(json);
 		}
 	};
 
