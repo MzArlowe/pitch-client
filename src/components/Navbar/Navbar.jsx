@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavbarData } from './NavbarData';
+import { NavbarData } from '../../data/NavbarData';
 import './Navbar.css';
 
 export default function Navbar() {

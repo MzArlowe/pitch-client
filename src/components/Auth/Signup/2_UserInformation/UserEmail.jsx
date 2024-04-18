@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './UserOne.css';
-import { userType } from './NavbarData';
+import './UserEmail.css';
+import { userType } from '../../../../data/NavbarData';
+import { Link } from 'react-router-dom';
 
 export default function UserOne() {
 	const [formData, setFormData] = useState({
@@ -77,14 +78,14 @@ export default function UserOne() {
 					/>
 				</div>
 
-				<a href='/confirmEmail'>
+				<Link to='/ConfirmEmail'>
 					{/* <button
 						type='submit'
 						className='btn'
 					> */}
 					Next
 					{/* </button> */}
-				</a>
+				</Link>
 			</form>
 			<a href='/Login'>Already have an account?</a>
 		</div>

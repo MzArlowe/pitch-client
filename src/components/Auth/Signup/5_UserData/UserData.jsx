@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './UserTwo.css';
+import './UserData.css';
 
 export default function UserTwo() {
 	const [formData, setFormData] = useState({
