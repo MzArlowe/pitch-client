@@ -1,5 +1,6 @@
 import './SignUp.css';
-import { setUserType } from './NavbarData';
+import { setUserType } from '../../../../data/NavbarData';
+import { Link } from 'react-router-dom';
 
 export default function SignUp() {
 	return (
@@ -16,21 +17,21 @@ export default function SignUp() {
 			</p>
 
 			<div>
-				<a
+				<Link
 					className='button'
-					href='/UserOne'
+					to='/SignupEmail'
 				>
 					<button onClick={() => setUserType('Founder')}>Founder</button>
-				</a>
+				</Link>
 			</div>
 
 			<div>
-				<a
-				// className='button'
-				// href='/UserOne'
+				<Link
+					className='button'
+					to='/SignupEmail'
 				>
 					<button onClick={() => setUserType('Funder')}>Funder</button>
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

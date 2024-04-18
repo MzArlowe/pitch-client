@@ -1,6 +1,6 @@
-import './confirmEmail.css';
+import './ConfirmEmail.css';
 
-export default function confirmEmail() {
+export default function ConfirmEmail() {
 	return (
 		<>
 			<div>
@@ -8,7 +8,7 @@ export default function confirmEmail() {
 				<h6>Let's continue...</h6>
 			</div>
 
-			<a href='/emailConfirmed'>
+			<a href='/EmailConfirmed'>
 				<button>Next</button>
 			</a>
 		</>
