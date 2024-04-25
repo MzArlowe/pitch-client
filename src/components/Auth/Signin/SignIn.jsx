@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './SignIn.css';
+import { Link } from 'react-router-dom';
 
 export default function Form() {
 	const [name, setName] = useState('');
@@ -117,12 +118,7 @@ export default function Form() {
 					Submit
 				</button>
 			</form>
-			<button
-				className='button2'
-				type='submit'
-			>
-				Create A New Account
-			</button>
+			<Link to='/SignUp'>Create A New Account</Link>
 		</div>
 	);
 }

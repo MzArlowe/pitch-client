@@ -27,12 +27,12 @@ export default function Dashboard() {
 
 	return (
 		<div className='home'>
+			WELCOME TO THE DASHBOARD
 			<iframe
 				id='map'
 				title='Inline Frame Example'
 				src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
 			></iframe>
-
 			<div className='file-upload'>
 				<button
 					className='file-upload-btn'

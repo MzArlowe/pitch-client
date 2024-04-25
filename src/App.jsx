@@ -3,15 +3,23 @@ import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 // import Dashboard from '.components/Dashboard';
 import './App.css';
-import UserEmail from './components/Auth/Signup/2_UserInformation/UserEmail';
-import UserData from './components/Auth/Signup/5_UserData/UserData';
 import Footer from './components/Footer/Footer';
+import Dashboard from './components/Dashboard/Dashboard';
 import Home from './components/Home/Home';
 import HTTP404 from './components/404/HTTP404';
 import SignIn from './components/Auth/Signin/SignIn';
-import SignUp from './components/Auth/Signup/1_Landing/SignUp';
-import ConfirmEmail from './components/Auth/Signup/3_ConfirmEmail/ConfirmEmail';
-import EmailConfirmed from './components/Auth/Signup/4_ValidEmail/EmailConfirmed';
+import SignUp from './components/Auth/Signup/01_Landing/SignUp';
+import UserEmail from './components/Auth/Signup/02_UserInformation/UserEmail';
+import ConfirmEmail from './components/Auth/Signup/03_ConfirmEmail/ConfirmEmail';
+import EmailConfirmed from './components/Auth/Signup/04_ValidEmail/EmailConfirmed';
+import UserData from './components/Auth/Signup/05_UserData/UserData';
+import ProjectChoice from './components/Auth/Signup/06_ProjectChoice/ProjectChoice';
+import FindProject from './components/Auth/Signup/07_FindProjectMember/FindProject/FindProject';
+import FindMember from './components/Auth/Signup/07_FindProjectMember/FindMember/FindMember';
+import ProjectDetails from './components/Auth/Signup/08_ProjectDetails/ProjectDetails';
+import ConfirmSetup from './components/Auth/Signup/09_ConfirmSetup/ConfirmSetup';
+import AccountCreated from './components/Auth/Signup/10_AccountCreated/AccountCreated';
+import { showNavbar } from './data/NavbarData';
 
 function App() {
 	const [hideHeader, setHideHeader] = useState(false);
@@ -59,11 +67,39 @@ function App() {
 			path: 'EmailConfirmed',
 			element: <EmailConfirmed />,
 		},
+		{
+			path: 'FindProject',
+			element: <FindProject />,
+		},
+		{
+			path: 'FindMember',
+			element: <FindMember />,
+		},
+		{
+			path: 'ProjectDetails',
+			element: <ProjectDetails />,
+		},
+		{
+			path: 'ConfirmSetup',
+			element: <ConfirmSetup />,
+		},
+		{
+			path: 'AccountCreated',
+			element: <AccountCreated />,
+		},
+		{
+			path: 'Dashboard',
+			element: <Dashboard />,
+		},
+		{
+			path: 'ProjectChoice',
+			element: <ProjectChoice />,
+		},
 	]);
 
 	return (
 		<div className='App'>
-			<Navbar />
+			{showNavbar && <Navbar />}
 			<RouterProvider router={router} />
 			<Footer />
 		</div>

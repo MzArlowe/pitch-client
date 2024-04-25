@@ -49,9 +49,9 @@ export default function UserOne() {
 					/>
 				</div>
 
-				<div className='requirements'>
+				{/* <div className='requirements'>
 					<a href='/requirements'>Requirements</a>
-				</div>
+				</div> */}
 				<div className='mb-3'>
 					<input
 						type='password'
