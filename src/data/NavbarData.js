@@ -47,4 +47,13 @@ function setUserType(type) {
 	console.log(userType);
 }
 
+let showNavbar = true;
+
+function setNavbar(val) {
+	showNavbar = val;
+	console.log({ showNavbar });
+}
+
+export { showNavbar, setNavbar };
+
 export { userType, setUserType };

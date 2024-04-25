@@ -1,8 +1,14 @@
 import './SignUp.css';
-import { setUserType } from '../../../../data/NavbarData';
+import { setUserType, setNavbar } from '../../../../data/NavbarData';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export default function SignUp() {
+	useEffect(() => {
+		// setTimeout(() => {
+		setNavbar(false);
+		// }, 100);
+	}, []);
 	return (
 		<div>
 			<h1>Are you a Founder or a Funder?</h1>

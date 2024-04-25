@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './UserData.css';
 import { Link } from 'react-router-dom';
+import { userType } from '../../../../data/NavbarData';
 
 export default function UserTwo() {
 	const [formData, setFormData] = useState({
@@ -91,7 +92,8 @@ export default function UserTwo() {
 					/>
 				</div>
 
-				<Link to='/FindProject'>
+				<Link to={userType === 'Founder' ? '/ProjectChoice' : '/FindMember'}>
+					{/* <Link to='/FindProject'> */}
 					{/* <button
 					type='submit'
 					className='btn'
