@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ConfirmEmail.css';
 
 export default function ConfirmEmail() {
@@ -8,9 +9,10 @@ export default function ConfirmEmail() {
 				<h6>Let's continue...</h6>
 			</div>
 
-			<a href='/EmailConfirmed'>
-				<button>Next</button>
-			</a>
+			{/* instead of being a direct link, will need to wait for the confirmation, or time out after a certian amount of time, with some visual loading/progress to go along with it */}
+			<Link to='/EmailConfirmed'>
+				<button>Send Confirmation Email</button>
+			</Link>
 		</>
 	);
 }

@@ -12,6 +12,11 @@ import SignIn from './components/Auth/Signin/SignIn';
 import SignUp from './components/Auth/Signup/1_Landing/SignUp';
 import ConfirmEmail from './components/Auth/Signup/3_ConfirmEmail/ConfirmEmail';
 import EmailConfirmed from './components/Auth/Signup/4_ValidEmail/EmailConfirmed';
+import FindProject from './components/Auth/Signup/6_FindProject/FindProject';
+import ProjectDetails from './components/Auth/Signup/7_ProjectDetails/ProjectDetails';
+import ConfirmSetup from './components/Auth/Signup/8_ConfirmSetup/ConfirmSetup';
+import AccountCreated from './components/Auth/Signup/9_AccountCreated/AccountCreated';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
 	const [hideHeader, setHideHeader] = useState(false);
@@ -58,6 +63,26 @@ function App() {
 		{
 			path: 'EmailConfirmed',
 			element: <EmailConfirmed />,
+		},
+		{
+			path: 'FindProject',
+			element: <FindProject />,
+		},
+		{
+			path: 'ProjectDetails',
+			element: <ProjectDetails />,
+		},
+		{
+			path: 'ConfirmSetup',
+			element: <ConfirmSetup />,
+		},
+		{
+			path: 'AccountCreated',
+			element: <AccountCreated />,
+		},
+		{
+			path: 'Dashboard',
+			element: <Dashboard />,
 		},
 	]);
 

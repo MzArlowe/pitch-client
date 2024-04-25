@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './UserData.css';
+import { Link } from 'react-router-dom';
 
 export default function UserTwo() {
 	const [formData, setFormData] = useState({
@@ -90,14 +91,14 @@ export default function UserTwo() {
 					/>
 				</div>
 
-				<a href='/FindProject'>
+				<Link to='/FindProject'>
 					{/* <button
 					type='submit'
 					className='btn'
 				> */}
 					Next
 					{/* </button> */}
-				</a>
+				</Link>
 			</form>
 		</div>
 	);
