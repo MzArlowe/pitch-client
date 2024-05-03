@@ -23,6 +23,7 @@ export default function FindMember() {
 				</Link>
 			</div>
 
+			<Link to='/ConfirmSetup'>Skip for now</Link>
 			{/* the skip button which allows us to create a new founder project */}
 			{/* <Link to='/ProjectDetails'>Create a new Project</Link> */}
 		</div>

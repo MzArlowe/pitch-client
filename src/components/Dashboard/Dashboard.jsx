@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Dashboard.css';
 
-export default function Dashboard() {
+export default function Dashboard({ setHideHeader }) {
+	useEffect(() => {
+		setHideHeader(false);
+	}, [setHideHeader]);
+
 	const [contentSrc, setContentSrc] = useState('');
 	const [contentName, setContentName] = useState('');
 

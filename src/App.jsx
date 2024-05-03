@@ -19,7 +19,6 @@ import FindMember from './components/Auth/Signup/07_FindProjectMember/FindMember
 import ProjectDetails from './components/Auth/Signup/08_ProjectDetails/ProjectDetails';
 import ConfirmSetup from './components/Auth/Signup/09_ConfirmSetup/ConfirmSetup';
 import AccountCreated from './components/Auth/Signup/10_AccountCreated/AccountCreated';
-import { showNavbar } from './data/NavbarData';
 
 function App() {
 	const [hideHeader, setHideHeader] = useState(false);
@@ -36,10 +35,10 @@ function App() {
 		{
 			path: 'SignIn',
 			element: <SignIn />,
-			loader: () => {
+			loader: (currentPath) => {
 				const loc = window.location.pathname; // grabs the path name from the url
 				if (!hideHeader) setHideHeader(loc === '/SignIn'); // if the path is `SignIn`, hide the header
-				return 'signin';
+				return currentPath;
 			},
 		},
 		{
@@ -89,7 +88,12 @@ function App() {
 		},
 		{
 			path: 'Dashboard',
-			element: <Dashboard />,
+			element: <Dashboard setHideHeader={setHideHeader} />,
+			// loader: () => {
+			// 	const loc = window.location.pathname; // grabs the path name from the url
+			// 	if (hideHeader) setHideHeader(loc === '/Dashboard'); // if the path is `SignIn`, hide the header
+			// 	return 'dashboard';
+			// },
 		},
 		{
 			path: 'ProjectChoice',
@@ -99,7 +103,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			{showNavbar && <Navbar />}
+			{!hideHeader && <Navbar />}
 			<RouterProvider router={router} />
 			<Footer />
 		</div>
