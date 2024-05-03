@@ -87,7 +87,6 @@ export default function UserOne() {
 					{/* </button> */}
 				</Link>
 			</form>
-			<a href='/Login'>Already have an account?</a>
 		</div>
 	);
 }

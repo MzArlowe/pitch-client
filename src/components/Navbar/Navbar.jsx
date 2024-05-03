@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavbarData } from '../../data/NavbarData';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -32,8 +33,10 @@ export default function Navbar() {
 							href={item.url}
 							className={item.className}
 						>
+							{/* <Link to='/signup'> */}
 							<i className={item.icon}></i>
 							{item.title}
+							{/* </Link> */}
 						</a>
 					</li>
 				))}
