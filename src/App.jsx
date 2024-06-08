@@ -105,7 +105,7 @@ function App() {
 		<div className='App'>
 			{!hideHeader && <Navbar />}
 			<RouterProvider router={router} />
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 }

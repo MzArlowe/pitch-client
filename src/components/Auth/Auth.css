@@ -25,3 +25,8 @@
 	width: 100%;
 	margin: 0 25px;
 }
+
+.continue-auth {
+	position: fixed;
+	bottom: 2em;
+}
