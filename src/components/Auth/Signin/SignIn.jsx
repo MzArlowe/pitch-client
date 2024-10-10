@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './SignIn.css';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, redirect } from 'react-router-dom';
 import { Button, TextField, Link, Typography, Box } from '@mui/material';
 
 export default function Form() {
@@ -28,7 +28,7 @@ export default function Form() {
 	};
 
 	const handleSubmit = async (e) => {
-		e.preventDefault();
+		// e.preventDefault();
 		if (email === '' || password === '') {
 			setError(true);
 		} else {
@@ -38,6 +38,9 @@ export default function Form() {
 			const data = await fetch('https://swapi.dev/api/people/1');
 			const json = await data.json();
 			console.log(json);
+			console.log(json.name);
+			// console.log(redirect('/Dashboard'));
+			// console.log(redirect);
 		}
 	};
 
@@ -49,7 +52,7 @@ export default function Form() {
 					display: submitted ? '' : 'none',
 				}}
 			>
-				<h1>User {name} successfully registered!!</h1>
+				<h1>User {name} success!</h1>
 			</div>
 		);
 	};
@@ -145,6 +148,8 @@ export default function Form() {
 						minHeight='100vh'
 					>
 						<Button
+							component={RouterLink}
+							to='/Dashboard'
 							onClick={handleSubmit}
 							variant='contained'
 							// className='continue-auth'
