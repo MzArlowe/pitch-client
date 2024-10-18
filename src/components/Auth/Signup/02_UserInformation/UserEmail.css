@@ -24,6 +24,7 @@ h6 {
 }
 
 #email,
+#password, /* temporary while the requirements button is commented out */
 #confirmPassword {
 	margin-top: 1rem;
 }

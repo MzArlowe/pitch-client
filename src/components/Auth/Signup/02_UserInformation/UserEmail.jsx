@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD:src/components/UserOne.jsx
 import './UserOne.css';
 import { userType } from './NavbarData';
+=======
+import './UserEmail.css';
+import { userType } from '../../../../data/NavbarData';
+import { Link } from 'react-router-dom';
+>>>>>>> 8d0e004858adc7e49dbfd1e633e5231bf1d4feb8:src/components/Auth/Signup/02_UserInformation/UserEmail.jsx
 
 export default function UserOne() {
 	const [formData, setFormData] = useState({
@@ -48,9 +54,9 @@ export default function UserOne() {
 					/>
 				</div>
 
-				<div className='requirements'>
+				{/* <div className='requirements'>
 					<a href='/requirements'>Requirements</a>
-				</div>
+				</div> */}
 				<div className='mb-3'>
 					<input
 						type='password'
@@ -77,16 +83,15 @@ export default function UserOne() {
 					/>
 				</div>
 
-				<a href='/confirmEmail'>
+				<Link to='/ConfirmEmail'>
 					{/* <button
 						type='submit'
 						className='btn'
 					> */}
 					Next
 					{/* </button> */}
-				</a>
+				</Link>
 			</form>
-			<a href='/Login'>Already have an account?</a>
 		</div>
 	);
 }

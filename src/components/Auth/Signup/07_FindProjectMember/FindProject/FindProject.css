@@ -1,0 +1,16 @@
+#project-search {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#project-name {
+	margin: 1em 0 3em;
+	width: 375px;
+	border: none;
+	border-radius: 10px;
+	background-color: #dddddd;
+	padding: 0 12px;
+	font-size: 18pt;
+}

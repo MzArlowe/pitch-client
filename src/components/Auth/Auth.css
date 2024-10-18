@@ -1,0 +1,32 @@
+.auth-parent {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	height: 85vh;
+}
+
+.header-text {
+	font-style: bold;
+	font-size: 40pt;
+	margin-bottom: 2em;
+}
+
+.primary-btn {
+	background-color: #6200ee;
+	color: white;
+	border-radius: 2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.3em 0.75em;
+	font-size: 1.75em;
+	max-width: 350px;
+	width: 100%;
+	margin: 0 25px;
+}
+
+.continue-auth {
+	position: fixed;
+	bottom: 2em;
+}

@@ -1,5 +1,11 @@
 import './SignUp.css';
+<<<<<<< HEAD:src/components/SignUp.jsx
 import { setUserType } from './NavbarData';
+=======
+import { setUserType, setNavbar } from '../../../../data/NavbarData';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+>>>>>>> 8d0e004858adc7e49dbfd1e633e5231bf1d4feb8:src/components/Auth/Signup/01_Landing/SignUp.jsx
 
 export default function SignUp() {
 	return (
@@ -16,11 +22,12 @@ export default function SignUp() {
 			</p>
 
 			<div>
-				<a
+				<Link
 					className='button'
-					href='/UserOne'
+					to='/SignupEmail'
 				>
 					<button onClick={() => setUserType('Founder')}>Founder</button>
+<<<<<<< HEAD:src/components/SignUp.jsx
 				</a>
 			</div>
 
@@ -31,7 +38,21 @@ export default function SignUp() {
 				>
 					<button onClick={() => setUserType('Funder')}>Funder</button>
 				</a>
+=======
+				</Link>
 			</div>
+
+			<div>
+				<Link
+					className='button'
+					to='/SignupEmail'
+				>
+					<button onClick={() => setUserType('Funder')}>Funder</button>
+				</Link>
+>>>>>>> 8d0e004858adc7e49dbfd1e633e5231bf1d4feb8:src/components/Auth/Signup/01_Landing/SignUp.jsx
+			</div>
+
+			<Link to='/SignIn'>Already have an account?</Link>
 		</div>
 	);
 }
