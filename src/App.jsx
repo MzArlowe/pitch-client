@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+	createBrowserRouter,
+	redirect,
+	RouterProvider,
+} from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 // import Dashboard from '.components/Dashboard';
@@ -89,11 +93,17 @@ function App() {
 		{
 			path: 'Dashboard',
 			element: <Dashboard setHideHeader={setHideHeader} />,
-			// loader: () => {
-			// 	const loc = window.location.pathname; // grabs the path name from the url
-			// 	if (hideHeader) setHideHeader(loc === '/Dashboard'); // if the path is `SignIn`, hide the header
-			// 	return 'dashboard';
-			// },
+			loader: async () => {
+				const user = false;
+				if (!user) {
+					return redirect('/Signup');
+				}
+				return null;
+
+				// const loc = window.location.pathname; // grabs the path name from the url
+				// if (hideHeader) setHideHeader(loc === '/Dashboard'); // if the path is `SignIn`, hide the header
+				// return 'dashboard';
+			},
 		},
 		{
 			path: 'ProjectChoice',
