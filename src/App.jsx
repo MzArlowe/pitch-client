@@ -23,6 +23,7 @@ import FindMember from './components/Auth/Signup/07_FindProjectMember/FindMember
 import ProjectDetails from './components/Auth/Signup/08_ProjectDetails/ProjectDetails';
 import ConfirmSetup from './components/Auth/Signup/09_ConfirmSetup/ConfirmSetup';
 import AccountCreated from './components/Auth/Signup/10_AccountCreated/AccountCreated';
+import EducationSection from './components/Education/EducationSection';
 
 function App() {
 	const [hideHeader, setHideHeader] = useState(false);
@@ -108,6 +109,10 @@ function App() {
 		{
 			path: 'ProjectChoice',
 			element: <ProjectChoice />,
+		},
+		{
+			path: 'Education',
+			element: <EducationSection />,
 		},
 	]);
 

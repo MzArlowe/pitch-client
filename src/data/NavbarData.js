@@ -12,8 +12,8 @@ export const NavbarData = [
 		icon: 'fa-solid fa-circle-info',
 	},
 	{
-		title: 'Service',
-		url: '/Service',
+		title: 'Resources',
+		url: '/Education',
 		className: 'nav-links',
 		icon: 'fa-solid fa-briefcase',
 	},
