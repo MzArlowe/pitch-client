@@ -1,5 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import './Dashboard.css';
+import {
+	CssBaseline,
+	AppBar,
+	Button,
+	Typography,
+	Container,
+	Toolbar,
+	Box,
+	Paper,
+} from '@mui/material';
+import { styled } from '@mui/system';
+import RSSFeed from 'components/RSSFeed';
+
+const StyledPaper = styled(Paper)({
+	padding: '16px',
+	margin: '16px 0',
+	textAlign: 'center',
+	display: 'flex',
+	flexDirection: 'column',
+	alignItems: 'center',
+});
 
 export default function Dashboard({ setHideHeader }) {
 	useEffect(() => {
@@ -28,62 +48,91 @@ export default function Dashboard({ setHideHeader }) {
 		setContentSrc('');
 		setContentName('');
 	}
+	const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+	const feedUrl = `${proxyUrl}https://example.com/rss`; // Use the proxy with the RSS feed
 
 	return (
-		<div className='home'>
-			WELCOME TO THE DASHBOARD
-			<iframe
-				id='map'
-				title='Inline Frame Example'
-				src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
-			></iframe>
-			<div className='file-upload'>
-				<button
-					className='file-upload-btn'
-					type='button'
-					onClick={() => document.querySelector('.file-upload-input').click()}
+		<Container>
+			<StyledPaper>
+				<Typography
+					variant='h4'
+					gutterBottom
+				>
+					Welcome to the Dashboard
+				</Typography>
+				<>
+					<CssBaseline />
+					<AppBar position='static'>
+						<Toolbar>
+							<Typography variant='h6'>RSS Feed Dashboard</Typography>
+						</Toolbar>
+					</AppBar>
+					<Dashboard />
+				</>
+				{/* <iframe
+					id='map'
+					title='Inline Frame Example'
+					src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
+					style={{ width: '100%', height: '300px', border: 'none' }}
+				/> */}
+				<Typography
+					variant='h4'
+					component='h1'
+					gutterBottom
+				>
+					Dashboard - RSS Feed
+				</Typography>
+				<RSSFeed feedUrl={feedUrl} />
+			</StyledPaper>
+
+			<StyledPaper>
+				<Button
+					variant='contained'
+					component='label'
+					style={{ marginBottom: '16px' }}
 				>
 					Add File
-				</button>
-
-				<div className='content-upload-wrap'>
 					<input
-						className='file-upload-input'
 						type='file'
+						hidden
 						onChange={(e) => readURL(e.target)}
 					/>
-					<div className='drag-text'>
-						<h3>Drag and drop a file or select add file</h3>
-					</div>
-				</div>
-				<div className='file-upload-content'>
-					<img
-						className='file-upload-content'
-						src={contentSrc}
-						alt='your pic'
-					/>
-					<div className='content-title-wrap'>
-						{contentName && (
-							<button
-								type='button'
+				</Button>
+
+				<Box>
+					<Typography variant='body1'>
+						Drag and drop a file or select to add a file
+					</Typography>
+				</Box>
+
+				{contentSrc && (
+					<Box mt={2}>
+						<img
+							style={{ maxWidth: '100%', borderRadius: '8px' }}
+							src={contentSrc}
+							alt='uploaded'
+						/>
+						<Box mt={2}>
+							<Button
+								variant='outlined'
+								color='error'
 								onClick={removeUpload}
-								className='remove-content'
 							>
 								Remove <span className='content-title'>{contentName}</span>
-							</button>
-						)}
-					</div>
-				</div>
-				<div className='file-upload'>
-					<button
-						className='file-upload-btn'
-						type='button'
-						onClick={() => document.querySelector('.file-upload-input').click()}
-					>
-						Upload
-					</button>
-				</div>
-			</div>
-		</div>
+							</Button>
+						</Box>
+					</Box>
+				)}
+			</StyledPaper>
+
+			<StyledPaper>
+				<Button
+					variant='contained'
+					onClick={() => document.querySelector('.file-upload-input').click()}
+				>
+					Upload
+				</Button>
+			</StyledPaper>
+		</Container>
 	);
 }
