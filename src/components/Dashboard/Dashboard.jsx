@@ -69,12 +69,12 @@ export default function Dashboard({ setHideHeader }) {
 					</AppBar>
 					<Dashboard />
 				</>
-				{/* <iframe
+				<iframe
 					id='map'
 					title='Inline Frame Example'
 					src='https://www.openstreetmap.org/export/embed.html?bbox=-86.62788391113281%2C39.52787769468346%2C-85.80940246582033%2C40.031294855540054&layer=mapnik'
 					style={{ width: '100%', height: '300px', border: 'none' }}
-				/> */}
+				/>
 				<Typography
 					variant='h4'
 					component='h1'
