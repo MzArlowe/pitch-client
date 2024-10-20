@@ -1,30 +1,64 @@
 import { Link } from 'react-router-dom';
-// import '../../Auth.css';
-// import './FindProject.css';
+import { Box, TextField, Typography, Button } from '@mui/material';
 
 export default function FindProject() {
 	return (
-		<div className='auth-parent'>
-			<div id='project-search'>
-				<h1 className='header-text'>Find Project</h1>
+		<Box
+			sx={{
+				width: '100%',
+				maxWidth: '500px',
+				margin: '0 auto',
+				padding: '20px',
+				textAlign: 'center',
+			}}
+		>
+			<Typography
+				variant='h4'
+				component='h1'
+				gutterBottom
+			>
+				Find Project
+			</Typography>
 
-				<input
-					id='project-name'
-					type='text'
-				/>
+			<TextField
+				id='project-name'
+				label='Project or Member Name'
+				variant='outlined'
+				fullWidth
+				sx={{ margin: '20px 0' }}
+			/>
 
-				{/* some logic here for finding and only continuing when the project is found */}
-				{/* WILL NOT be a link, rather a button that will render a redirect if the conditions are met */}
-				<Link
-					className='primary-btn'
-					to='/ConfirmSetup'
-				>
-					Search
-				</Link>
-			</div>
+			{/* Logic for finding the project will go here */}
+			<Button
+				variant='contained'
+				color='primary'
+				fullWidth
+				component={Link}
+				to='/ConfirmSetup'
+				sx={{ marginBottom: '20px' }}
+			>
+				Search
+			</Button>
 
-			{/* the skip button which allows us to create a new founder project */}
-			{/* <Link to='/ProjectDetails'>Create a new Project</Link> */}
-		</div>
+			{/* The skip button allowing us to create a new project */}
+			<Button
+				variant='contained'
+				color='secondary'
+				fullWidth
+				component={Link}
+				to='/ProjectDetails'
+				sx={{ marginBottom: '20px' }}
+			>
+				Create a New Project
+			</Button>
+
+			{/* Skip for Now Link */}
+			<Link
+				to='/ConfirmSetup'
+				style={{ textDecoration: 'underline', cursor: 'pointer' }}
+			>
+				Skip for now
+			</Link>
+		</Box>
 	);
 }

@@ -10,7 +10,7 @@ import {
 	Paper,
 } from '@mui/material';
 import { styled } from '@mui/system';
-import RSSFeed from 'components/RSSFeed';
+// import RSSFeed from 'components/RSSFeed';
 
 const StyledPaper = styled(Paper)({
 	padding: '16px',
@@ -82,7 +82,7 @@ export default function Dashboard({ setHideHeader }) {
 				>
 					Dashboard - RSS Feed
 				</Typography>
-				<RSSFeed feedUrl={feedUrl} />
+				{/* <RSSFeed feedUrl={feedUrl} /> */}
 			</StyledPaper>
 
 			<StyledPaper>

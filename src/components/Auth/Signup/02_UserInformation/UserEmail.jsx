@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './UserEmail.css';
-import { userType } from '../../../../data/NavbarData';
 import { Link } from 'react-router-dom';
 
 export default function UserOne() {
+	// Set userType dynamically using state
+	const [userType, setUserType] = useState('Founder'); // Default to 'Founder' or 'Funder'
+
 	const [formData, setFormData] = useState({
 		email: '',
 		password: '',
@@ -18,7 +20,7 @@ export default function UserOne() {
 		});
 	};
 
-	const progress = 0; // Set initial value (0-100).
+	const progress = 0; // Set initial value (0-100)
 	let progressDiv = progress;
 	if (progress < 2) {
 		progressDiv = 2;
@@ -27,7 +29,7 @@ export default function UserOne() {
 	return (
 		<div className='container'>
 			<h1>{userType} Account</h1>
-			<h5>Let’s setup your {userType.toLowerCase()} account login details.</h5>
+			<h5>Let’s set up your {userType.toLowerCase()} account login details.</h5>
 
 			<h6>{progress}%</h6>
 
@@ -49,9 +51,6 @@ export default function UserOne() {
 					/>
 				</div>
 
-				{/* <div className='requirements'>
-					<a href='/requirements'>Requirements</a>
-				</div> */}
 				<div className='mb-3'>
 					<input
 						type='password'
@@ -78,13 +77,11 @@ export default function UserOne() {
 					/>
 				</div>
 
-				<Link to='/ConfirmEmail'>
-					{/* <button
-						type='submit'
-						className='btn'
-					> */}
+				<Link
+					to='/ConfirmEmail'
+					className='btn'
+				>
 					Next
-					{/* </button> */}
 				</Link>
 			</form>
 		</div>

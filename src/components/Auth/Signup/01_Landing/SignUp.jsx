@@ -1,41 +1,79 @@
-import './SignUp.css';
-import { setUserType, setNavbar } from '../../../../data/NavbarData';
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import React from 'react';
+import { Box, Typography, Button, Link } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
+	const navigate = useNavigate();
+
 	return (
-		<div>
-			<h1>Are you a Founder or a Funder?</h1>
-			<p>
-				<strong>Founder: </strong>And individual that forms and establishes a
+		<Box
+			sx={{
+				width: '100%',
+				maxWidth: '500px',
+				margin: '0 auto',
+				padding: '20px',
+				textAlign: 'center',
+			}}
+		>
+			<Typography
+				variant='h4'
+				gutterBottom
+			>
+				Are you a Founder or a Funder?
+			</Typography>
+
+			<Typography
+				variant='body1'
+				gutterBottom
+			>
+				<strong>Founder:</strong> An individual who forms and establishes a
 				business or organization. Essentially, a Founder takes an idea to an
 				entity.
-			</p>
-			<p>
-				<strong>Funder: </strong>A person or organization that provides money
+			</Typography>
+			<Typography
+				variant='body1'
+				gutterBottom
+			>
+				<strong>Funder:</strong> A person or organization that provides money
 				for a particular purpose.
-			</p>
+			</Typography>
 
-			<div>
-				<Link
-					className='button'
-					to='/SignupEmail'
+			{/* Founder Button */}
+			<Box sx={{ margin: '20px 0' }}>
+				<Button
+					fullWidth
+					variant='contained'
+					color='primary'
+					onClick={() =>
+						navigate('/SignupEmail', { state: { userType: 'Founder' } })
+					}
+					sx={{ marginBottom: '10px' }}
 				>
-					<button onClick={() => setUserType('Founder')}>Founder</button>
-				</Link>
-			</div>
+					Founder
+				</Button>
+			</Box>
 
-			<div>
-				<Link
-					className='button'
-					to='/SignupEmail'
+			{/* Funder Button */}
+			<Box sx={{ marginBottom: '20px' }}>
+				<Button
+					fullWidth
+					variant='contained'
+					color='secondary'
+					onClick={() =>
+						navigate('/SignupEmail', { state: { userType: 'Funder' } })
+					}
 				>
-					<button onClick={() => setUserType('Funder')}>Funder</button>
-				</Link>
-			</div>
+					Funder
+				</Button>
+			</Box>
 
-			<Link to='/SignIn'>Already have an account?</Link>
-		</div>
+			{/* Already have an account? */}
+			<Link
+				href='/SignIn'
+				underline='hover'
+			>
+				Already have an account?
+			</Link>
+		</Box>
 	);
 }
