@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-	AppBar,
-	Toolbar,
 	Typography,
 	Container,
 	List,
@@ -11,20 +9,45 @@ import {
 } from '@mui/material';
 
 const EducationSection = () => {
+	console.log('Rendering EducationSection'); // Add this line
 	const links = [
+		{
+			name: 'Structure for your business (SBA Website)',
+			url: 'https://www.sba.gov/business-guide/launch-your-business/choose-business-structure',
+		},
+		{
+			name: 'How to start a minority business (Nerdwallet Website)',
+			url: 'https://www.nerdwallet.com/article/small-business/how-to-start-a-minority-owned-business',
+		},
+		{
+			name: 'Small Business Statistics (Nerdwallet Website)',
+			url: 'https://www.nerdwallet.com/article/small-business/small-business-statistics',
+		},
+		{
+			name: 'Types of Investors (Forbes Website)',
+			url: 'https://www.forbes.com/sites/alejandrocremades/2019/01/02/8-types-of-investors-for-startups/?sh=714a202e4a3e',
+		},
+		{
+			name: 'Starting/Incorporating a Business',
+			url: 'https://www.legalzoom.com',
+		},
+		{
+			name: 'What is an accredited investor (Forbes Website)',
+			url: 'https://www.forbes.com/advisor/investing/what-is-accredited-investor/',
+		},
 		{
 			category: 'Business Structure and Legal Considerations',
 			items: [
 				{
-					name: 'Choose Your Business Structure (SBA Website)',
+					name: 'SBA Website - Choose Your Business Structure',
 					url: 'https://www.sba.gov/business-guide/launch-your-business/choose-business-structure',
 				},
 				{
-					name: 'Starting/Incorporating a Business (LegalZoom)',
+					name: 'Starting/Incorporating a Business - LegalZoom',
 					url: 'https://www.legalzoom.com',
 				},
 				{
-					name: 'Small Business and Self-Employed Tax Center (IRS)',
+					name: 'Internal Revenue Service (IRS) - Small Business and Self-Employed Tax Center',
 					url: 'https://www.irs.gov/businesses/small-businesses-self-employed',
 				},
 			],
@@ -43,6 +66,8 @@ const EducationSection = () => {
 				{
 					name: 'Minority Business Development Agency (MBDA)',
 					url: 'https://www.mbda.gov/',
+					description:
+						'(Provides access to capital and financial assistance programs)',
 				},
 			],
 		},
@@ -56,6 +81,8 @@ const EducationSection = () => {
 				{
 					name: 'National Minority Supplier Development Council (NMSDC)',
 					url: 'https://nmsdc.org/',
+					description:
+						'(Connects minority-owned businesses with corporate members)',
 				},
 				{
 					name: 'SCORE - Resources for Minority-Owned Businesses',
@@ -64,6 +91,7 @@ const EducationSection = () => {
 				{
 					name: 'Operation HOPE',
 					url: 'https://operationhope.org/',
+					description: '(Provides financial literacy and empowerment programs)',
 				},
 			],
 		},
@@ -71,16 +99,20 @@ const EducationSection = () => {
 			category: 'General Business Guidance',
 			items: [
 				{
-					name: '10 Steps to Start Your Business (SBA)',
+					name: 'SBA - 10 Steps to Start Your Business',
 					url: 'https://www.sba.gov/business-guide/10-steps-start-your-business',
 				},
 				{
 					name: 'Small Business Administration (SBA)',
 					url: 'https://www.sba.gov/',
+					description:
+						'(Offers a wealth of resources, including counseling, training, and funding programs)',
 				},
 				{
 					name: 'Service Corps of Retired Executives (SCORE)',
 					url: 'https://www.score.org/',
+					description:
+						'(Provides free mentoring and counseling from experienced business professionals)',
 				},
 			],
 		},
@@ -92,11 +124,12 @@ const EducationSection = () => {
 					url: 'https://www.nerdwallet.com/article/small-business/small-business-statistics',
 				},
 				{
-					name: 'Office of Advocacy (SBA)',
+					name: 'SBA - Office of Advocacy',
 					url: 'https://advocacy.sba.gov/',
+					description: '(Publishes research and data on small businesses)',
 				},
 				{
-					name: 'MBDA - Research and Data',
+					name: 'Minority Business Development Agency (MBDA) - Research and Data',
 					url: 'https://www.mbda.gov/',
 				},
 			],
@@ -105,7 +138,7 @@ const EducationSection = () => {
 			category: 'Additional Resources',
 			items: [
 				{
-					name: 'Top Resources for Minority-Owned Businesses (U.S. Chamber of Commerce)',
+					name: 'U.S. Chamber of Commerce - Top Resources for Minority-Owned Businesses',
 					url: 'https://www.uschamber.com/co/start/strategy/top-resources-for-minority-owned-businesses',
 				},
 				{
@@ -114,57 +147,37 @@ const EducationSection = () => {
 				},
 				{
 					name: 'Local Chambers of Commerce and Business Associations',
-					url: '#', // Placeholder, add the actual URL if available
+					description:
+						'(Many local organizations offer resources and support specifically for minority-owned businesses.)',
 				},
 			],
 		},
 	];
 
 	return (
-		<>
-			<AppBar position='static'>
-				<Toolbar>
-					<Typography variant='h6'>Education</Typography>
-				</Toolbar>
-			</AppBar>
+		<Container>
+			<Typography
+				variant='h4'
+				gutterBottom
+				style={{ marginTop: '20px' }}
+			>
+				Resources for Everyone
+			</Typography>
 
-			{/* Add a Toolbar to create space below the AppBar */}
-			<Toolbar />
-
-			<Container>
-				<Typography
-					variant='h4'
-					gutterBottom
-					style={{ marginTop: '20px' }}
-				>
-					Resources for Everyone
-				</Typography>
-
-				{links.map((category, index) => (
-					<div key={index}>
-						<Typography
-							variant='h5'
-							gutterBottom
+			<List>
+				{links.map((link, index) => (
+					<ListItem key={index}>
+						<MUILink
+							href={link.url}
+							target='_blank'
+							rel='noopener noreferrer'
 						>
-							{category.category}
-						</Typography>
-						<List>
-							{category.items.map((link, linkIndex) => (
-								<ListItem key={linkIndex}>
-									<MUILink
-										href={link.url}
-										target='_blank'
-										rel='noopener noreferrer'
-									>
-										<ListItemText primary={link.name} />
-									</MUILink>
-								</ListItem>
-							))}
-						</List>
-					</div>
+							<ListItemText primary={link.name} />
+						</MUILink>
+					</ListItem>
 				))}
-			</Container>
-		</>
+			</List>
+		</Container>
 	);
 };
 
