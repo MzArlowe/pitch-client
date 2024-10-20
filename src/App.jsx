@@ -23,8 +23,8 @@ import ProjectDetails from './components/Auth/Signup/08_ProjectDetails/ProjectDe
 import ConfirmSetup from './components/Auth/Signup/09_ConfirmSetup/ConfirmSetup';
 import AccountCreated from './components/Auth/Signup/10_AccountCreated/AccountCreated';
 import EducationSection from 'components/Education/EducationSection';
-import { AppBar, Toolbar, Typography, Container } from '@mui/material';
-
+// import { AppBar, Toolbar, Typography, Container } from '@mui/material';
+import { Container } from '@mui/material';
 function App() {
 	const [hideHeader, setHideHeader] = useState(false);
 
@@ -118,11 +118,11 @@ function App() {
 
 	return (
 		<div className='App'>
-			<AppBar position='static'>
+			{/* <AppBar position='auto'>
 				<Toolbar>
 					<Typography variant='h6'>Education</Typography>
 				</Toolbar>
-			</AppBar>
+			</AppBar> */}
 
 			<Container
 				style={{
