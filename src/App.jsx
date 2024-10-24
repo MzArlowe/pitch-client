@@ -60,16 +60,16 @@ function App() {
 			element: <UserEmail />,
 		},
 		{
-			path: 'SignupData',
-			element: <UserData />,
-		},
-		{
 			path: 'ConfirmEmail',
 			element: <ConfirmEmail />,
 		},
 		{
 			path: 'EmailConfirmed',
 			element: <EmailConfirmed />,
+		},
+		{
+			path: 'SignupData',
+			element: <UserData />,
 		},
 		{
 			path: 'FindProject',
