@@ -1,31 +1,58 @@
-import { Link } from 'react-router-dom';
-// import '../../Auth.css';
-// import './FindProject.css';
+import React, { useState } from 'react';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 export default function FindMember() {
+	const [memberName, setMemberName] = useState('');
+	const navigate = useNavigate();
+
+	const handleSearch = () => {
+		// Placeholder logic: if the memberName is not empty, navigate to '/ConfirmSetup'.
+		// You can replace this with actual member search logic later.
+		if (memberName.trim()) {
+			navigate('/ConfirmSetup');
+		}
+	};
+
 	return (
-		<div className='auth-parent'>
-			<div id='project-search'>
-				<h1 className='header-text'>Find Member</h1>
+		<Box
+			sx={{
+				width: '100%',
+				maxWidth: '500px',
+				margin: '0 auto',
+				padding: '20px',
+				textAlign: 'center',
+			}}
+		>
+			<Typography
+				variant='h4'
+				gutterBottom
+			>
+				Find Member
+			</Typography>
 
-				<input
+			{/* Text field to search for a member */}
+			<Box sx={{ marginBottom: '20px' }}>
+				<TextField
+					fullWidth
 					id='member-name'
-					type='text'
+					label='Enter Member Name'
+					variant='outlined'
+					value={memberName}
+					onChange={(e) => setMemberName(e.target.value)}
 				/>
+			</Box>
 
-				{/* some logic here for finding and only continuing when the project is found */}
-				{/* WILL NOT be a link, rather a button that will render a redirect if the conditions are met */}
-				<Link
-					className='primary-btn'
-					to='/ConfirmSetup'
-				>
-					Search
-				</Link>
-			</div>
-
-			<Link to='/ConfirmSetup'>Skip for now</Link>
-			{/* the skip button which allows us to create a new founder project */}
-			{/* <Link to='/ProjectDetails'>Create a new Project</Link> */}
-		</div>
+			{/* Search Button */}
+			<Button
+				variant='contained'
+				color='primary'
+				fullWidth
+				onClick={handleSearch}
+				disabled={!memberName.trim()} // Disable button if no input
+			>
+				Search
+			</Button>
+		</Box>
 	);
 }

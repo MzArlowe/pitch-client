@@ -5,9 +5,8 @@ import {
 } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-// import Dashboard from '.components/Dashboard';
 import './App.css';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 import Dashboard from './components/Dashboard/Dashboard';
 import Home from './components/Home/Home';
 import HTTP404 from './components/404/HTTP404';
@@ -23,8 +22,9 @@ import FindMember from './components/Auth/Signup/07_FindProjectMember/FindMember
 import ProjectDetails from './components/Auth/Signup/08_ProjectDetails/ProjectDetails';
 import ConfirmSetup from './components/Auth/Signup/09_ConfirmSetup/ConfirmSetup';
 import AccountCreated from './components/Auth/Signup/10_AccountCreated/AccountCreated';
-import EducationSection from './components/Education/EducationSection';
-
+import EducationSection from 'components/Education/EducationSection';
+// import { AppBar, Toolbar, Typography, Container } from '@mui/material';
+import { Container } from '@mui/material';
 function App() {
 	const [hideHeader, setHideHeader] = useState(false);
 
@@ -60,16 +60,16 @@ function App() {
 			element: <UserEmail />,
 		},
 		{
-			path: 'SignupData',
-			element: <UserData />,
-		},
-		{
 			path: 'ConfirmEmail',
 			element: <ConfirmEmail />,
 		},
 		{
 			path: 'EmailConfirmed',
 			element: <EmailConfirmed />,
+		},
+		{
+			path: 'SignupData',
+			element: <UserData />,
 		},
 		{
 			path: 'FindProject',
@@ -118,9 +118,21 @@ function App() {
 
 	return (
 		<div className='App'>
+			{/* <AppBar position='auto'>
+				<Toolbar>
+					<Typography variant='h6'>Education</Typography>
+				</Toolbar>
+			</AppBar> */}
+
+			<Container
+				style={{
+					marginTop: '64px',
+					maxHeight: 'calc(100vh - 64px)',
+					overflowY: 'auto',
+				}}
+			></Container>
 			{!hideHeader && <Navbar />}
 			<RouterProvider router={router} />
-			{/* <Footer /> */}
 		</div>
 	);
 }
